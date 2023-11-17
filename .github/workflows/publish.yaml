@@ -12,19 +12,22 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Make conda environment
-        uses: conda-incubator/setup-miniconda@v2
+      - name: Build Sphinx
+        uses: ammaraskar/sphinx-action@master
         with:
-          environment-file: environment.yml
-          auto-update-conda: false
-          auto-activate-base: false
-          show-channel-urls: true
-      - name: Installing the library
-        shell: bash -l {0}
+          docs-folder: "source/"
+      - name: Commit changes
         run: |
-          python setup.py install
-      - name: Running the Sphinx to gh-pages Action
-        uses: uibcdf/action-sphinx-docs-to-gh-pages@v1.1.0
+          git clone https://github.com/manila-fairness/manila-fairness.github.io.git --branch gh-pages --single-branch gh-pages
+          cp -r source/_build/html/* gh-pages/
+          cd gh-pages
+          git config --local user.email "giordano.daloisio@gmail.com"
+          git config --local user.name "giordanoDaloisio"
+          git add .
+          git commit -m "Update documentation" -a || true
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          branch: main
-          dir_docs: source
+          branch: gh-pages
+          directory: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
