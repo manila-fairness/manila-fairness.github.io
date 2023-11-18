@@ -29,13 +29,12 @@ Please cite our work if you use MANILA in your research:
    }
 
 
-.. Contents
-.. --------
-.. .. toctree::
-..    usage
-..    tutorial
-..    test
-..    :maxdepth: 2
+Contents
+--------
+.. toctree::
+   tutorial
+   :maxdepth: 2
+..   usage
 
 
 

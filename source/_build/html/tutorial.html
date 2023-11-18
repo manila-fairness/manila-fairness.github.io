@@ -13,7 +13,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Usage" href="usage.html" />
+    <link rel="prev" title="Welcome to MANILA’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -32,6 +32,34 @@
             
   <section id="step-by-step-tutorial">
 <h1>Step-by-Step Tutorial<a class="headerlink" href="#step-by-step-tutorial" title="Link to this heading">¶</a></h1>
+<p>In this tutorial you will use MANILA to perform a <em>fairness</em> and <em>effectiveness</em> evaluation of different machine learning settings (i.e., machile learning model and fairness-enhancing methods) to predict recidivism of condemned people using the well-known <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">COMPAS</a> dataset.</p>
+<p>In particular you will evaluate the fairness and effectiveness of the following settings using the following metrics:</p>
+<ul class="simple">
+<li><p><strong>Settings:</strong> <em>Logistic Regression (LR)</em>, and <em>Random Forest (RF)</em> with and without the following fairness-enhancing methods: <em>Reweighing</em>, and <em>Debiaser for Multiple Variables</em> (DEMV).</p></li>
+<li><p><strong>Metrics:</strong> <em>Accuracy</em>, <em>Disparate Impact</em>, <em>Equalized Odds</em>.</p></li>
+</ul>
+<p>Finally, you will use the <em>Harmonic Mean</em> as aggregation function to obtain a single score for each setting.</p>
+<p>MANILA will independently evaluate each setting using the selected metrics and identify the best setting according to the selected aggregation function.</p>
+<p>In the following, we show the steps to perform the evaluation.</p>
+<section id="obtain-the-dataset">
+<h2>1. Obtain the dataset<a class="headerlink" href="#obtain-the-dataset" title="Link to this heading">¶</a></h2>
+<p>First, you need to obtain the dataset. In this tutorial, we will use the COMPAS dataset. The dataset can be downloaded from <a class="reference download internal" download="" href="_downloads/cf7224d3463e96459a817f344c0fd8f5/compas.csv"><span class="xref download myst">here</span></a>.</p>
+<p>At this time, MANILA supports only tabular datasets in different formats (e.g., CSV, Excel, JSON, etc.). The format of the dataset can be specified from the interface of MANILA.</p>
+</section>
+<section id="access-manila">
+<h2>2. Access MANILA<a class="headerlink" href="#access-manila" title="Link to this heading">¶</a></h2>
+<p>Access MANILA from the <a href="https://sobigdata.d4science.org/group/sobigdata.it/manila-univaq" target="_blank">SoBigData RI</a>. If not already done, you need to register to the system, the registration is free.</p>
+<p>After registering to the system you will find MANILA in the catalogue of services by clicking on the catalogue icon in the top bar and by going on the <em>SoBigData Services and Products</em> organisation.</p>
+<p>The interface of MANILA is shown below:
+<img alt="manila" src="_images/manila.png" /></p>
+</section>
+<section id="using-manila">
+<h2>3. Using MANILA<a class="headerlink" href="#using-manila" title="Link to this heading">¶</a></h2>
+<p>MANILA is divided into different sections that allow you to specify the different features of your experiment.</p>
+<section id="dataset">
+<h3>3.1. Dataset<a class="headerlink" href="#dataset" title="Link to this heading">¶</a></h3>
+</section>
+</section>
 </section>
 
 
@@ -52,15 +80,19 @@
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Step-by-Step Tutorial</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Step-by-Step Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#obtain-the-dataset">1. Obtain the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#access-manila">2. Access MANILA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-manila">3. Using MANILA</a></li>
+</ul>
+</li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="usage.html" title="previous chapter">Usage</a></li>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to MANILA’s documentation!</a></li>
   </ul></li>
 </ul>
 </div>
