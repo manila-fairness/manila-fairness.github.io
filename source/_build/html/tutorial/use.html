@@ -198,69 +198,69 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="use-manila">
 <h1>3. Use MANILA<a class="headerlink" href="#use-manila" title="Link to this heading"></a></h1>
-<p>MANILA is divided into different sections that allow you to specify the different features of your experiment.</p>
+<p class="linemarker linemarker-3">MANILA is divided into different sections that allow you to specify the different features of your experiment.</p>
 <section id="dataset">
 <h2>3.1. Dataset<a class="headerlink" href="#dataset" title="Link to this heading"></a></h2>
-<p>The first section requires you to specify information about the input dataset.</p>
+<p class="linemarker linemarker-7">The first section requires you to specify information about the input dataset.</p>
 <ul class="simple">
-<li><p>The dataset you are using is a <code class="docutils literal notranslate"><span class="pre">csv</span></code> dataset, hence specify <code class="docutils literal notranslate"><span class="pre">CSV</span></code> in the <em>File Extension</em> field.</p></li>
-<li><p>Next, you have to specify information about the label. In our case, the label is <em>binary</em> and its name in the dataset is <code class="docutils literal notranslate"><span class="pre">two_year_recid</span></code>. Finally, you have to specify the <em>positive</em> value of the label (i.e., the one towards the discrimation is performed), which is <code class="docutils literal notranslate"><span class="pre">0</span></code> in our case.</p></li>
-<li><p>Next, you have to specify the <em>sensitive variables</em> of the dataset (i.e., the ones identifying the protected groups). In our case, we have one sensitive variable named <code class="docutils literal notranslate"><span class="pre">race</span></code>. Hence, specify that the dataset has a single sensitive variable and put <code class="docutils literal notranslate"><span class="pre">race</span></code> in the <strong>Variable Name</strong> field. Finally, specify the values in the dataset identifying the <strong>Unprivileged</strong> and <strong>Privileged</strong> groups, which are <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code> respectively.</p></li>
+<li><p class="linemarker linemarker-9">The dataset you are using is a <code class="docutils literal notranslate"><span class="pre">csv</span></code> dataset, hence specify <code class="docutils literal notranslate"><span class="pre">CSV</span></code> in the <em>File Extension</em> field.</p></li>
+<li><p class="linemarker linemarker-10">Next, you have to specify information about the label. In our case, the label is <em>binary</em> and its name in the dataset is <code class="docutils literal notranslate"><span class="pre">two_year_recid</span></code>. Finally, you have to specify the <em>positive</em> value of the label (i.e., the one towards the discrimation is performed), which is <code class="docutils literal notranslate"><span class="pre">0</span></code> in our case.</p></li>
+<li><p class="linemarker linemarker-11">Next, you have to specify the <em>sensitive variables</em> of the dataset (i.e., the ones identifying the protected groups). In our case, we have one sensitive variable named <code class="docutils literal notranslate"><span class="pre">race</span></code>. Hence, specify that the dataset has a single sensitive variable and put <code class="docutils literal notranslate"><span class="pre">race</span></code> in the <strong>Variable Name</strong> field. Finally, specify the values in the dataset identifying the <strong>Unprivileged</strong> and <strong>Privileged</strong> groups, which are <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code> respectively.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The values of the sensitive variables must be encoded into numerical values. For example, if the sensitive variable is <code class="docutils literal notranslate"><span class="pre">sex</span></code> and the values are <code class="docutils literal notranslate"><span class="pre">male</span></code> and <code class="docutils literal notranslate"><span class="pre">female</span></code>, then you have to encode them into numerical values (e.g., <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
+<p class="linemarker linemarker-14">The values of the sensitive variables must be encoded into numerical values. For example, if the sensitive variable is <code class="docutils literal notranslate"><span class="pre">sex</span></code> and the values are <code class="docutils literal notranslate"><span class="pre">male</span></code> and <code class="docutils literal notranslate"><span class="pre">female</span></code>, then you have to encode them into numerical values (e.g., <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>).</p>
 </div>
 <ul class="simple">
-<li><p>Finally, the dataset has the index encoded into the first column and contains the header. Hence, specify that the dataset has the index column in position <code class="docutils literal notranslate"><span class="pre">0</span></code> and that it contains the header.</p></li>
+<li><p class="linemarker linemarker-17">Finally, the dataset has the index encoded into the first column and contains the header. Hence, specify that the dataset has the index column in position <code class="docutils literal notranslate"><span class="pre">0</span></code> and that it contains the header.</p></li>
 </ul>
-<p>Eventually, the specification of the dataset should look like the following:</p>
-<p><img alt="dataset" src="../_images/dataset.png" /></p>
+<p class="linemarker linemarker-19">Eventually, the specification of the dataset should look like the following:</p>
+<p class="linemarker linemarker-21"><img alt="dataset" src="../_images/dataset.png" /></p>
 </section>
 <section id="scaler">
 <h2>3.2. Scaler<a class="headerlink" href="#scaler" title="Link to this heading"></a></h2>
-<p>In this section, you can specify a scaler to be applied to the dataset. In our case, we will use the <code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Scaler</span></code>, hence select it from the list.</p>
-<p><img alt="scaler" src="../_images/scaler.png" /></p>
+<p class="linemarker linemarker-25">In this section, you can specify a scaler to be applied to the dataset. In our case, we will use the <code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Scaler</span></code>, hence select it from the list.</p>
+<p class="linemarker linemarker-27"><img alt="scaler" src="../_images/scaler.png" /></p>
 </section>
 <section id="ml-task">
 <h2>3.3. ML Task<a class="headerlink" href="#ml-task" title="Link to this heading"></a></h2>
-<p>In this section, you can specify the machine learning task you want to perform and the relative ML algorithms. In our case, we will perform a <em>binary classification</em> task using <em>Logistic Regression</em> and <em>Random Forest</em> models, hence select them from the list.</p>
-<p>You can also specify to save semi-trained models (i.e., models trained on only the training set) and the training size (i.e., the percentage of the dataset to be used for training). In our case, we will not need to save the semi-trained models and we will use the default value of <code class="docutils literal notranslate"><span class="pre">80%</span></code> of the dataset for training.</p>
-<p><img alt="ML Task" src="../_images/ml_task.png" /></p>
+<p class="linemarker linemarker-31">In this section, you can specify the machine learning task you want to perform and the relative ML algorithms. In our case, we will perform a <em>binary classification</em> task using <em>Logistic Regression</em> and <em>Random Forest</em> models, hence select them from the list.</p>
+<p class="linemarker linemarker-33">You can also specify to save semi-trained models (i.e., models trained on only the training set) and the training size (i.e., the percentage of the dataset to be used for training). In our case, we will not need to save the semi-trained models and we will use the default value of <code class="docutils literal notranslate"><span class="pre">80%</span></code> of the dataset for training.</p>
+<p class="linemarker linemarker-35"><img alt="ML Task" src="../_images/ml_task.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>MANILA will automatically disables ML models not compatible with other selected features. For instance, it will disable ML models not compatible with some selected fairness methods (e.g., <em>Reweighing</em> is not compatible with <em>MLP Classifier</em>).</p>
+<p class="linemarker linemarker-39">MANILA will automatically disables ML models not compatible with other selected features. For instance, it will disable ML models not compatible with some selected fairness methods (e.g., <em>Reweighing</em> is not compatible with <em>MLP Classifier</em>).</p>
 </div>
 </section>
 <section id="quality-methods">
 <h2>3.4. Quality Methods<a class="headerlink" href="#quality-methods" title="Link to this heading"></a></h2>
-<p>In this section, you can specify methods related to some quality attributes. At this time, MANILA contains only methods related to <em>fairness</em>. In future, it will include methods enhancing other quality attributes (e.g., <em>explainability</em>).</p>
-<p>In our experiment, we want to evaluate the fairness of the ML methods alone and with the <em>Reweighing</em> and <em>DEMV</em> methods. Hence, select <code class="docutils literal notranslate"><span class="pre">fairness</span></code> and then check <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Method</span></code>, <code class="docutils literal notranslate"><span class="pre">Reweighing</span></code>, and <code class="docutils literal notranslate"><span class="pre">DEMV</span></code> from the list.</p>
-<p><img alt="fairness_methods" src="../_images/fairness.png" /></p>
+<p class="linemarker linemarker-45">In this section, you can specify methods related to some quality attributes. At this time, MANILA contains only methods related to <em>fairness</em>. In future, it will include methods enhancing other quality attributes (e.g., <em>explainability</em>).</p>
+<p class="linemarker linemarker-47">In our experiment, we want to evaluate the fairness of the ML methods alone and with the <em>Reweighing</em> and <em>DEMV</em> methods. Hence, select <code class="docutils literal notranslate"><span class="pre">fairness</span></code> and then check <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Method</span></code>, <code class="docutils literal notranslate"><span class="pre">Reweighing</span></code>, and <code class="docutils literal notranslate"><span class="pre">DEMV</span></code> from the list.</p>
+<p class="linemarker linemarker-49"><img alt="fairness_methods" src="../_images/fairness.png" /></p>
 </section>
 <section id="metrics">
 <h2>3.5. Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h2>
-<p>In this section, you can specify the metrics to be used to evaluate the ML settings in terms of <em>effectiveness</em> and <em>fairness</em>.</p>
-<p>The metrics are divided into three sections: <em>Classification</em>, <em>Regression</em>, and <em>Fairness</em> metrics.
+<p class="linemarker linemarker-53">In this section, you can specify the metrics to be used to evaluate the ML settings in terms of <em>effectiveness</em> and <em>fairness</em>.</p>
+<p class="linemarker linemarker-55">The metrics are divided into three sections: <em>Classification</em>, <em>Regression</em>, and <em>Fairness</em> metrics.
 In our case, the <em>Regression</em> metrics are disabled since we are performing a <em>classification</em> task.</p>
-<p>Concerning classification metrics, select <em>Accuracy</em> among the list.</p>
-<p>Then, you have to specify fairness metrics. These metrics are divided into <em>group</em> and <em>individual</em> fairness metrics. In our case, we are evaluating <em>group fairness</em> definitions, hence check this option.</p>
-<p>Then, metrics are grouped into two main categories <em>Equally</em> fairness and <em>Proportional</em> fairness. <em>Disparate Impact</em> belongs to the first category, while <em>Equalized Odds</em> belongs to the second one. Hence, check both of them and select <em>Disparate Impact</em> and <em>Equalized Odds</em>.</p>
-<p>Finally, there is the section to specify the aggregation function to be used to aggregate the different metrics. In our case, we will use the <em>Harmonic Mean</em>.</p>
-<p><img alt="metrics" src="../_images/metrics.png" /></p>
+<p class="linemarker linemarker-58">Concerning classification metrics, select <em>Accuracy</em> among the list.</p>
+<p class="linemarker linemarker-60">Then, you have to specify fairness metrics. These metrics are divided into <em>group</em> and <em>individual</em> fairness metrics. In our case, we are evaluating <em>group fairness</em> definitions, hence check this option.</p>
+<p class="linemarker linemarker-62">Then, metrics are grouped into two main categories <em>Equally</em> fairness and <em>Proportional</em> fairness. <em>Disparate Impact</em> belongs to the first category, while <em>Equalized Odds</em> belongs to the second one. Hence, check both of them and select <em>Disparate Impact</em> and <em>Equalized Odds</em>.</p>
+<p class="linemarker linemarker-64">Finally, there is the section to specify the aggregation function to be used to aggregate the different metrics. In our case, we will use the <em>Harmonic Mean</em>.</p>
+<p class="linemarker linemarker-66"><img alt="metrics" src="../_images/metrics.png" /></p>
 </section>
 <section id="validation">
 <h2>3.6. Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h2>
-<p>In this section, you can specify the cross-validation strategy. You will not use cross validation in this tutorial, hence leave the section unchecked.</p>
-<p><img alt="validation" src="../_images/validation.png" /></p>
+<p class="linemarker linemarker-70">In this section, you can specify the cross-validation strategy. You will not use cross validation in this tutorial, hence leave the section unchecked.</p>
+<p class="linemarker linemarker-72"><img alt="validation" src="../_images/validation.png" /></p>
 </section>
 <section id="upload-dataset">
 <h2>3.7. Upload dataset<a class="headerlink" href="#upload-dataset" title="Link to this heading"></a></h2>
-<p>Finally, you can upload the dataset to perform the evaluation on the server. To do so, click on the empty field and upload the dataset you have downloaded at the beginning of the tutorial.</p>
+<p class="linemarker linemarker-76">Finally, you can upload the dataset to perform the evaluation on the server. To do so, click on the empty field and upload the dataset you have downloaded at the beginning of the tutorial.</p>
 </section>
 <section id="run-the-experiment">
 <h2>3.8. Run the experiment<a class="headerlink" href="#run-the-experiment" title="Link to this heading"></a></h2>
-<p>Finally, you can run the experiment by clicking on the <em>Run</em> button. The experiment will be executed on the server and you will see the results in the <em>Results</em> page.</p>
+<p class="linemarker linemarker-80">Finally, you can run the experiment by clicking on the <em>Run</em> button. The experiment will be executed on the server and you will see the results in the <em>Results</em> page.</p>
 </section>
 </section>
 
