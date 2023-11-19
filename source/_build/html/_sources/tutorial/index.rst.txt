@@ -1,0 +1,6 @@
+Step-by-Step Tutorial
+======================
+
+In this tutorial you will use MANILA to perform a *fairness* and *effectiveness* evaluation of different machine learning settings (i.e., machile learning model and fairness-enhancing methods) to predict recidivism of condemned people using the well-known `COMPAS https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing` dataset.
+
+In particular you will evaluate the fairness and effectiveness of the following settings using the following metrics:
