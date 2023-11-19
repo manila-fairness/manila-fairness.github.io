@@ -1,40 +1,8 @@
-# Step-by-Step Tutorial
-
-In this tutorial you will use MANILA to perform a _fairness_ and _effectiveness_ evaluation of different machine learning settings (i.e., machile learning model and fairness-enhancing methods) to predict recidivism of condemned people using the well-known [COMPAS](https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing) dataset.
-
-In particular you will evaluate the fairness and effectiveness of the following settings using the following metrics:
-
-- **Settings:** _Logistic Regression_, and _Random Forest_ with and without the following fairness-enhancing methods: _Reweighing_, and _Debiaser for Multiple Variables (DEMV)_.
-- **Metrics:** _Accuracy_, _Disparate Impact_, _Equalized Odds_.
-
-Finally, you will use the _Harmonic Mean_ as aggregation function to obtain a single score for each setting.
-
-MANILA will independently evaluate each setting using the selected metrics and identify the best setting according to the selected aggregation function.
-
-In the following, we show the steps to perform the evaluation.
-
-## 1. Obtain the dataset
-
-First, you need to obtain the dataset. In this tutorial, we will use the COMPAS dataset. The dataset can be downloaded from [here](./_static/compas.csv).
-
-:::{note}
-At this time, MANILA supports only tabular datasets in different formats (e.g., CSV, Excel, JSON, etc.). The format of the dataset can be specified from the interface of MANILA.
-:::
-
-## 2. Access MANILA
-
-Access MANILA from the <a href="https://sobigdata.d4science.org/group/sobigdata.it/manila-univaq" target="_blank">SoBigData RI</a>. If not already done, you need to register to the system, the registration is free.
-
-After registering to the system you will find MANILA in the catalogue of services by clicking on the catalogue icon in the top bar and by going on the _SoBigData Services and Products_ organisation.
-
-The interface of MANILA is shown below:
-![manila](./_static/manila.png)
-
-## 3. Using MANILA
+# 3. Use MANILA
 
 MANILA is divided into different sections that allow you to specify the different features of your experiment.
 
-### 3.1. Dataset
+## 3.1. Dataset
 
 The first section requires you to specify information about the input dataset.
 
@@ -50,21 +18,21 @@ The values of the sensitive variables must be encoded into numerical values. For
 
 Eventually, the specification of the dataset should look like the following:
 
-![dataset](./_static/dataset.png)
+![dataset](../_static/dataset.png)
 
-### 3.2. Scaler
+## 3.2. Scaler
 
 In this section, you can specify a scaler to be applied to the dataset. In our case, we will use the `Standard Scaler`, hence select it from the list.
 
-![scaler](./_static/scaler.png)
+![scaler](../_static/scaler.png)
 
-### 3.3. ML Task
+## 3.3. ML Task
 
 In this section, you can specify the machine learning task you want to perform and the relative ML algorithms. In our case, we will perform a _binary classification_ task using _Logistic Regression_ and _Random Forest_ models, hence select them from the list.
 
 You can also specify to save semi-trained models (i.e., models trained on only the training set) and the training size (i.e., the percentage of the dataset to be used for training). In our case, we will not need to save the semi-trained models and we will use the default value of `80%` of the dataset for training.
 
-![ML Task](./_static/ml_task.png)
+![ML Task](../_static/ml_task.png)
 
 :::{note}
 
@@ -72,15 +40,15 @@ MANILA will automatically disables ML models not compatible with other selected 
 
 :::
 
-### 3.4. Quality Methods
+## 3.4. Quality Methods
 
 In this section, you can specify methods related to some quality attributes. At this time, MANILA contains only methods related to _fairness_. In future, it will include methods enhancing other quality attributes (e.g., _explainability_).
 
 In our experiment, we want to evaluate the fairness of the ML methods alone and with the _Reweighing_ and _DEMV_ methods. Hence, select `fairness` and then check `No Method`, `Reweighing`, and `DEMV` from the list.
 
-![fairness_methods](./_static/fairness.png)
+![fairness_methods](../_static/fairness.png)
 
-### 3.5. Metrics
+## 3.5. Metrics
 
 In this section, you can specify the metrics to be used to evaluate the ML settings in terms of _effectiveness_ and _fairness_.
 
@@ -95,18 +63,18 @@ Then, metrics are grouped into two main categories _Equally_ fairness and _Propo
 
 Finally, there is the section to specify the aggregation function to be used to aggregate the different metrics. In our case, we will use the _Harmonic Mean_.
 
-![metrics](./_static/metrics.png)
+![metrics](../_static/metrics.png)
 
-### 3.6. Validation
+## 3.6. Validation
 
 In this section, you can specify the cross-validation strategy. You will not use cross validation in this tutorial, hence leave the section unchecked.
 
-![validation](./_static/validation.png)
+![validation](../_static/validation.png)
 
-### 3.7. Upload dataset
+## 3.7. Upload dataset
 
 Finally, you can upload the dataset to perform the evaluation on the server. To do so, click on the empty field and upload the dataset you have downloaded at the beginning of the tutorial.
 
-### 3.8. Run the experiment
+## 3.8. Run the experiment
 
 Finally, you can run the experiment by clicking on the _Run_ button. The experiment will be executed on the server and you will see the results in the _Results_ page.

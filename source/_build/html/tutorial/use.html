@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="en" data-content_root="./">
+<html class="no-js" lang="en" data-content_root="../">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="2. Access MANILA" href="access.html" />
 
     <!-- Generated with Sphinx 7.2.6 and Furo 2023.09.10 -->
-        <title>Step-by-Step Tutorial - MANILA documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+        <title>3. Use MANILA - MANILA documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">MANILA  documentation</div></a>
+      <a href="../index.html"><div class="brand">MANILA  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,22 +143,22 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   
   <span class="sidebar-brand-text">MANILA  documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial/index.html">Step-by-Step Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Step-by-Step Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial/dataset.html">1. Obtain the dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial/access.html">2. Access MANILA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorial/use.html">3. Using MANILA</a></li>
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Step-by-Step Tutorial</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Step-by-Step Tutorial</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dataset.html">1. Obtain the dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access.html">2. Access MANILA</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3. Use MANILA</a></li>
 </ul>
 </li>
 </ul>
@@ -195,37 +195,11 @@
           </label>
         </div>
         <article role="main">
-          <section class="tex2jax_ignore mathjax_ignore" id="step-by-step-tutorial">
-<h1>Step-by-Step Tutorial<a class="headerlink" href="#step-by-step-tutorial" title="Link to this heading"></a></h1>
-<p>In this tutorial you will use MANILA to perform a <em>fairness</em> and <em>effectiveness</em> evaluation of different machine learning settings (i.e., machile learning model and fairness-enhancing methods) to predict recidivism of condemned people using the well-known <a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing">COMPAS</a> dataset.</p>
-<p>In particular you will evaluate the fairness and effectiveness of the following settings using the following metrics:</p>
-<ul class="simple">
-<li><p><strong>Settings:</strong> <em>Logistic Regression</em>, and <em>Random Forest</em> with and without the following fairness-enhancing methods: <em>Reweighing</em>, and <em>Debiaser for Multiple Variables (DEMV)</em>.</p></li>
-<li><p><strong>Metrics:</strong> <em>Accuracy</em>, <em>Disparate Impact</em>, <em>Equalized Odds</em>.</p></li>
-</ul>
-<p>Finally, you will use the <em>Harmonic Mean</em> as aggregation function to obtain a single score for each setting.</p>
-<p>MANILA will independently evaluate each setting using the selected metrics and identify the best setting according to the selected aggregation function.</p>
-<p>In the following, we show the steps to perform the evaluation.</p>
-<section id="obtain-the-dataset">
-<h2>1. Obtain the dataset<a class="headerlink" href="#obtain-the-dataset" title="Link to this heading"></a></h2>
-<p>First, you need to obtain the dataset. In this tutorial, we will use the COMPAS dataset. The dataset can be downloaded from <a class="reference download internal" download="" href="_downloads/cf7224d3463e96459a817f344c0fd8f5/compas.csv"><span class="xref download myst">here</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>At this time, MANILA supports only tabular datasets in different formats (e.g., CSV, Excel, JSON, etc.). The format of the dataset can be specified from the interface of MANILA.</p>
-</div>
-</section>
-<section id="access-manila">
-<h2>2. Access MANILA<a class="headerlink" href="#access-manila" title="Link to this heading"></a></h2>
-<p>Access MANILA from the <a href="https://sobigdata.d4science.org/group/sobigdata.it/manila-univaq" target="_blank">SoBigData RI</a>. If not already done, you need to register to the system, the registration is free.</p>
-<p>After registering to the system you will find MANILA in the catalogue of services by clicking on the catalogue icon in the top bar and by going on the <em>SoBigData Services and Products</em> organisation.</p>
-<p>The interface of MANILA is shown below:
-<img alt="manila" src="_images/manila.png" /></p>
-</section>
-<section id="using-manila">
-<h2>3. Using MANILA<a class="headerlink" href="#using-manila" title="Link to this heading"></a></h2>
+          <section class="tex2jax_ignore mathjax_ignore" id="use-manila">
+<h1>3. Use MANILA<a class="headerlink" href="#use-manila" title="Link to this heading"></a></h1>
 <p>MANILA is divided into different sections that allow you to specify the different features of your experiment.</p>
 <section id="dataset">
-<h3>3.1. Dataset<a class="headerlink" href="#dataset" title="Link to this heading"></a></h3>
+<h2>3.1. Dataset<a class="headerlink" href="#dataset" title="Link to this heading"></a></h2>
 <p>The first section requires you to specify information about the input dataset.</p>
 <ul class="simple">
 <li><p>The dataset you are using is a <code class="docutils literal notranslate"><span class="pre">csv</span></code> dataset, hence specify <code class="docutils literal notranslate"><span class="pre">CSV</span></code> in the <em>File Extension</em> field.</p></li>
@@ -240,31 +214,31 @@
 <li><p>Finally, the dataset has the index encoded into the first column and contains the header. Hence, specify that the dataset has the index column in position <code class="docutils literal notranslate"><span class="pre">0</span></code> and that it contains the header.</p></li>
 </ul>
 <p>Eventually, the specification of the dataset should look like the following:</p>
-<p><img alt="dataset" src="_images/dataset.png" /></p>
+<p><img alt="dataset" src="../_images/dataset.png" /></p>
 </section>
 <section id="scaler">
-<h3>3.2. Scaler<a class="headerlink" href="#scaler" title="Link to this heading"></a></h3>
+<h2>3.2. Scaler<a class="headerlink" href="#scaler" title="Link to this heading"></a></h2>
 <p>In this section, you can specify a scaler to be applied to the dataset. In our case, we will use the <code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Scaler</span></code>, hence select it from the list.</p>
-<p><img alt="scaler" src="_images/scaler.png" /></p>
+<p><img alt="scaler" src="../_images/scaler.png" /></p>
 </section>
 <section id="ml-task">
-<h3>3.3. ML Task<a class="headerlink" href="#ml-task" title="Link to this heading"></a></h3>
+<h2>3.3. ML Task<a class="headerlink" href="#ml-task" title="Link to this heading"></a></h2>
 <p>In this section, you can specify the machine learning task you want to perform and the relative ML algorithms. In our case, we will perform a <em>binary classification</em> task using <em>Logistic Regression</em> and <em>Random Forest</em> models, hence select them from the list.</p>
 <p>You can also specify to save semi-trained models (i.e., models trained on only the training set) and the training size (i.e., the percentage of the dataset to be used for training). In our case, we will not need to save the semi-trained models and we will use the default value of <code class="docutils literal notranslate"><span class="pre">80%</span></code> of the dataset for training.</p>
-<p><img alt="ML Task" src="_images/ml_task.png" /></p>
+<p><img alt="ML Task" src="../_images/ml_task.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>MANILA will automatically disables ML models not compatible with other selected features. For instance, it will disable ML models not compatible with some selected fairness methods (e.g., <em>Reweighing</em> is not compatible with <em>MLP Classifier</em>).</p>
 </div>
 </section>
 <section id="quality-methods">
-<h3>3.4. Quality Methods<a class="headerlink" href="#quality-methods" title="Link to this heading"></a></h3>
+<h2>3.4. Quality Methods<a class="headerlink" href="#quality-methods" title="Link to this heading"></a></h2>
 <p>In this section, you can specify methods related to some quality attributes. At this time, MANILA contains only methods related to <em>fairness</em>. In future, it will include methods enhancing other quality attributes (e.g., <em>explainability</em>).</p>
 <p>In our experiment, we want to evaluate the fairness of the ML methods alone and with the <em>Reweighing</em> and <em>DEMV</em> methods. Hence, select <code class="docutils literal notranslate"><span class="pre">fairness</span></code> and then check <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Method</span></code>, <code class="docutils literal notranslate"><span class="pre">Reweighing</span></code>, and <code class="docutils literal notranslate"><span class="pre">DEMV</span></code> from the list.</p>
-<p><img alt="fairness_methods" src="_images/fairness.png" /></p>
+<p><img alt="fairness_methods" src="../_images/fairness.png" /></p>
 </section>
 <section id="metrics">
-<h3>3.5. Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h3>
+<h2>3.5. Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h2>
 <p>In this section, you can specify the metrics to be used to evaluate the ML settings in terms of <em>effectiveness</em> and <em>fairness</em>.</p>
 <p>The metrics are divided into three sections: <em>Classification</em>, <em>Regression</em>, and <em>Fairness</em> metrics.
 In our case, the <em>Regression</em> metrics are disabled since we are performing a <em>classification</em> task.</p>
@@ -272,21 +246,20 @@ In our case, the <em>Regression</em> metrics are disabled since we are performin
 <p>Then, you have to specify fairness metrics. These metrics are divided into <em>group</em> and <em>individual</em> fairness metrics. In our case, we are evaluating <em>group fairness</em> definitions, hence check this option.</p>
 <p>Then, metrics are grouped into two main categories <em>Equally</em> fairness and <em>Proportional</em> fairness. <em>Disparate Impact</em> belongs to the first category, while <em>Equalized Odds</em> belongs to the second one. Hence, check both of them and select <em>Disparate Impact</em> and <em>Equalized Odds</em>.</p>
 <p>Finally, there is the section to specify the aggregation function to be used to aggregate the different metrics. In our case, we will use the <em>Harmonic Mean</em>.</p>
-<p><img alt="metrics" src="_images/metrics.png" /></p>
+<p><img alt="metrics" src="../_images/metrics.png" /></p>
 </section>
 <section id="validation">
-<h3>3.6. Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h3>
+<h2>3.6. Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h2>
 <p>In this section, you can specify the cross-validation strategy. You will not use cross validation in this tutorial, hence leave the section unchecked.</p>
-<p><img alt="validation" src="_images/validation.png" /></p>
+<p><img alt="validation" src="../_images/validation.png" /></p>
 </section>
 <section id="upload-dataset">
-<h3>3.7. Upload dataset<a class="headerlink" href="#upload-dataset" title="Link to this heading"></a></h3>
+<h2>3.7. Upload dataset<a class="headerlink" href="#upload-dataset" title="Link to this heading"></a></h2>
 <p>Finally, you can upload the dataset to perform the evaluation on the server. To do so, click on the empty field and upload the dataset you have downloaded at the beginning of the tutorial.</p>
 </section>
 <section id="run-the-experiment">
-<h3>3.8. Run the experiment<a class="headerlink" href="#run-the-experiment" title="Link to this heading"></a></h3>
+<h2>3.8. Run the experiment<a class="headerlink" href="#run-the-experiment" title="Link to this heading"></a></h2>
 <p>Finally, you can run the experiment by clicking on the <em>Run</em> button. The experiment will be executed on the server and you will see the results in the <em>Results</em> page.</p>
-</section>
 </section>
 </section>
 
@@ -296,7 +269,17 @@ In our case, the <em>Regression</em> metrics are disabled since we are performin
         
         <div class="related-pages">
           
-          
+          <a class="prev-page" href="access.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">2. Access MANILA</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -327,10 +310,7 @@ In our case, the <em>Regression</em> metrics are disabled since we are performin
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Step-by-Step Tutorial</a><ul>
-<li><a class="reference internal" href="#obtain-the-dataset">1. Obtain the dataset</a></li>
-<li><a class="reference internal" href="#access-manila">2. Access MANILA</a></li>
-<li><a class="reference internal" href="#using-manila">3. Using MANILA</a><ul>
+<li><a class="reference internal" href="#">3. Use MANILA</a><ul>
 <li><a class="reference internal" href="#dataset">3.1. Dataset</a></li>
 <li><a class="reference internal" href="#scaler">3.2. Scaler</a></li>
 <li><a class="reference internal" href="#ml-task">3.3. ML Task</a></li>
@@ -342,8 +322,6 @@ In our case, the <em>Regression</em> metrics are disabled since we are performin
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 
           </div>
         </div>
@@ -352,11 +330,11 @@ In our case, the <em>Regression</em> metrics are disabled since we are performin
       
     </aside>
   </div>
-</div><script src="_static/jquery.js?v=5d32c60e"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+</div><script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

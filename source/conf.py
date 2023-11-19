@@ -9,7 +9,7 @@
 project = "MANILA"
 copyright = "2023, Giordano d'Aloisio"
 author = "Giordano d'Aloisio"
-release = "0.1"
+# release = "0.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

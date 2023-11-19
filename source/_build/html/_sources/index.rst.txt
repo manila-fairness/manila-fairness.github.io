@@ -32,7 +32,7 @@ Please cite our work if you use MANILA in your research:
 Contents
 --------
 .. toctree::
-   tutorial
+   tutorial/index
    :maxdepth: 2
 ..   usage
 
