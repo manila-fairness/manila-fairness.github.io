@@ -25,6 +25,7 @@ Please cite our work if you use MANILA in your research:
       booktitle={International Conference on Fundamental Approaches to Software Engineering},
       pages={88--110},
       year={2023},
+      doi={10.1007/978-3-031-30826-0_5},
       organization={Springer Nature Switzerland Cham}
    }
 
