@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "MANILA"
-copyright = "2023, Giordano d'Aloisio"
+copyright = "2025, Giordano d'Aloisio"
 author = "Giordano d'Aloisio"
 # release = "0.1"
 
