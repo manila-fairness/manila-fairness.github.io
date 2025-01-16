@@ -40,13 +40,13 @@ MANILA will automatically disables ML models not compatible with other selected 
 
 :::
 
-## 3.4. Quality Methods
+## 3.4. Fairness Methods
 
-In this section, you can specify methods related to some quality attributes. At this time, MANILA contains only methods related to _fairness_. In future, it will include methods enhancing other quality attributes (e.g., _explainability_).
+In this section, you can specify the fairness-enhancing methods to evaluate.
 
-In our experiment, we want to evaluate the fairness of the ML methods alone and with the _Reweighing_ and _DEMV_ methods. Hence, select `fairness` and then check `No Method`, `Reweighing`, and `DEMV` from the list.
+In our experiment, we want to evaluate the fairness of the ML methods alone and with the _Reweighing_ and _DEMV_ methods. Hence, select `Apply Fairness Methods` and then check `No Method`, `Reweighing`, and `DEMV` from the list.
 
-![fairness_methods](../_static/fairness.png)
+![fairness](../_static/fairness.png)
 
 ## 3.5. Metrics
 

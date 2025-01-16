@@ -282,11 +282,11 @@
 <p>MANILA will automatically disables ML models not compatible with other selected features. For instance, it will disable ML models not compatible with some selected fairness methods (e.g., <em>Reweighing</em> is not compatible with <em>MLP Classifier</em>).</p>
 </div>
 </section>
-<section id="quality-methods">
-<h2>3.4. Quality Methods<a class="headerlink" href="#quality-methods" title="Link to this heading"></a></h2>
-<p>In this section, you can specify methods related to some quality attributes. At this time, MANILA contains only methods related to <em>fairness</em>. In future, it will include methods enhancing other quality attributes (e.g., <em>explainability</em>).</p>
-<p>In our experiment, we want to evaluate the fairness of the ML methods alone and with the <em>Reweighing</em> and <em>DEMV</em> methods. Hence, select <code class="docutils literal notranslate"><span class="pre">fairness</span></code> and then check <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Method</span></code>, <code class="docutils literal notranslate"><span class="pre">Reweighing</span></code>, and <code class="docutils literal notranslate"><span class="pre">DEMV</span></code> from the list.</p>
-<p><img alt="fairness_methods" src="../_images/fairness.png" /></p>
+<section id="fairness-methods">
+<h2>3.4. Fairness Methods<a class="headerlink" href="#fairness-methods" title="Link to this heading"></a></h2>
+<p>In this section, you can specify the fairness-enhancing methods to evaluate.</p>
+<p>In our experiment, we want to evaluate the fairness of the ML methods alone and with the <em>Reweighing</em> and <em>DEMV</em> methods. Hence, select <code class="docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">Fairness</span> <span class="pre">Methods</span></code> and then check <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Method</span></code>, <code class="docutils literal notranslate"><span class="pre">Reweighing</span></code>, and <code class="docutils literal notranslate"><span class="pre">DEMV</span></code> from the list.</p>
+<p><img alt="fairness" src="../_images/fairness.png" /></p>
 </section>
 <section id="metrics">
 <h2>3.5. Metrics<a class="headerlink" href="#metrics" title="Link to this heading"></a></h2>
@@ -373,7 +373,7 @@ In our case, the <em>Regression</em> metrics are disabled since we are performin
 <li><a class="reference internal" href="#dataset">3.1. Dataset</a></li>
 <li><a class="reference internal" href="#scaler">3.2. Scaler</a></li>
 <li><a class="reference internal" href="#ml-task">3.3. ML Task</a></li>
-<li><a class="reference internal" href="#quality-methods">3.4. Quality Methods</a></li>
+<li><a class="reference internal" href="#fairness-methods">3.4. Fairness Methods</a></li>
 <li><a class="reference internal" href="#metrics">3.5. Metrics</a></li>
 <li><a class="reference internal" href="#validation">3.6. Validation</a></li>
 <li><a class="reference internal" href="#upload-dataset">3.7. Upload dataset</a></li>
