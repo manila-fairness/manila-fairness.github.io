@@ -271,34 +271,32 @@ pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </s
 <li><p>Install and launch the Redis database (refer to the official documentation (<a class="reference external" href="https://redis.io/download">https://redis.io/download</a>) for more information).</p></li>
 <li><p>Launch the backend:</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">app</span>
-<span class="pre">python</span> <span class="pre">manila/app.py</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>app
+python<span class="w"> </span>manila/app.py
+</pre></div>
+</div>
 <ol class="arabic simple" start="4">
 <li><p>Launch the Celery worker:</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">app/manila</span>
-<span class="pre">celery</span> <span class="pre">-A</span> <span class="pre">run_celery.celery</span> <span class="pre">worker</span> <span class="pre">--loglevel=info</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>app/manila
+celery<span class="w"> </span>-A<span class="w"> </span>run_celery.celery<span class="w"> </span>worker<span class="w"> </span>--loglevel<span class="o">=</span>info
+</pre></div>
+</div>
 <ol class="arabic simple" start="5">
 <li><p>Install the dependencies of the frontend:</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">frontend</span>
-<span class="pre">npm</span> <span class="pre">install</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>frontend
+npm<span class="w"> </span>install
+</pre></div>
+</div>
 <ol class="arabic simple" start="6">
 <li><p>Launch the frontend:</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">frontend</span>
-<span class="pre">npm</span> <span class="pre">start</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>frontend
+npm<span class="w"> </span>start
+</pre></div>
+</div>
 <p>The application will be available at <cite>http://localhost:3000</cite>.</p>
-<p>MANILA is a Python package that can be used as a library or as a web-application.</p>
-<p>It is freely available as a web-application in the <a class="reference external" href="https://sobigdata.d4science.org/group/sobigdata.it/manila-univaq">SoBigData Research Infrastructure</a>.</p>
 </section>
 <section id="citation-request">
 <h2>Citation Request<a class="headerlink" href="#citation-request" title="Link to this heading"></a></h2>

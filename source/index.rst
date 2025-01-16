@@ -39,39 +39,41 @@ To run the application manually, follow the steps below:
 
 3. Launch the backend:
 
-```bash
-cd app
-python manila/app.py
-```
+.. code-block:: bash
+
+   cd app
+   python manila/app.py
+
 
 4. Launch the Celery worker:
 
-```bash
-cd app/manila
-celery -A run_celery.celery worker --loglevel=info
-```
+.. code-block:: bash
+   
+   cd app/manila
+   celery -A run_celery.celery worker --loglevel=info
+
 
 5. Install the dependencies of the frontend:
 
-```bash
-cd frontend
-npm install
-```
+.. code-block:: bash
+   
+   cd frontend
+   npm install
+
 
 6. Launch the frontend:
 
-```bash
-cd frontend
-npm start
-```
+.. code-block:: bash
+   
+   cd frontend
+   npm start
+
 
 The application will be available at `http://localhost:3000`.
 
 
-MANILA is a Python package that can be used as a library or as a web-application.
 
-
-It is freely available as a web-application in the `SoBigData Research Infrastructure <https://sobigdata.d4science.org/group/sobigdata.it/manila-univaq>`_.
+.. It is freely available as a web-application in the `SoBigData Research Infrastructure <https://sobigdata.d4science.org/group/sobigdata.it/manila-univaq>`_.
 
 Citation Request
 ----------------
