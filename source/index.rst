@@ -11,7 +11,19 @@ Welcome to MANILA's documentation!
 Installation
 ------------
 
-To install MANILA, you can use the following command:
+First, download the source code from the GitHub repository:
+
+.. code-block:: bash
+
+    git clone https://github.com/giordanoDaloisio/manila-web.git
+
+Then, navigate to the downloaded folder: 
+
+.. code-block:: bash
+
+    cd manila-web
+
+There are two ways to run the application: using Docker or manually.
 
 **Using Docker**
 
